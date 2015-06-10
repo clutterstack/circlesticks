@@ -35,20 +35,17 @@ function initImage(){
 
         //Draw the circle
         ctx.beginPath();
-        ctx.arc(elem.circlex, elem.circley, elem.circlerad, 0, 2*Math.PI);
+        ctx.arc(circlex, circley, circlerad, 0, 2*Math.PI);
         ctx.stroke();
 
         // Draw the stick
         ctx.beginPath();
-        ctx.moveTo(elem.stickstartx, elem.stickstarty);
-        ctx.lineTo(elem.stickendx, elem.stickendy);
+        ctx.moveTo(stickstartx, stickstarty);
+        ctx.lineTo(stickendx, stickendy);
         ctx.stroke();
     }
     else {
         //canvas not supported so do some kind of fallback
     }
-    //}
 
-    //draw();
 }
-initImage();
