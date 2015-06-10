@@ -1,11 +1,15 @@
 "use strict";
 
 function wholeApp(){
-    // ------Start with function definitions
+    // ------Start with some variables
+    var circlerad = 5;
+    
+    
+    // ---- Now function definitions
     
     //function to write message on canvas - adapted from hml5canvastutorials.com
     function writeMessage(canvas, message) {
-    var context = canvas.getContext('2d');
+    //var context = canvas.getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.font = '12pt Calibri';
     context.fillStyle = 'black';
@@ -22,6 +26,16 @@ function wholeApp(){
         y: Math.round((ev.clientY - rect.top)/(rect.bottom - rect.top)*canvas.width)
         };
     }
+    
+    function drawCircle(canvas, coords) {
+        //Draw the circle
+        context.beginPath();
+        context.arc(coords.x, coords.y, circlerad, 0, 2*Math.PI);
+        context.stroke();
+    }
+        
+        
+        
     // ---------- End function definitions, now start the action ------------
     
     // define the canvas element
@@ -29,7 +43,7 @@ function wholeApp(){
     
     // generate the condext variable for the canvas
     if (canvas.getContext){
-        var ctx = canvas.getContext('2d');
+        var context = canvas.getContext('2d');
     }
     else {//In this case canvas isn't supported and we should fail gracefully somehow.
         // See mozilla developer's network basic canvas tut
@@ -40,6 +54,7 @@ function wholeApp(){
         var mousePos = getMouseCoords(canvas, ev);
         var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
         writeMessage(canvas, message);
+        drawCircle(canvas, mousePos);
     }, false);
     
     // Listener for mousedown

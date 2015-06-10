@@ -6,8 +6,8 @@
     
 }
 
-#canvas {
+#mainCanvas {
     border: 1px #000;
-    dispay: inline;
+    display: inline;
     background-color: white;
 }
