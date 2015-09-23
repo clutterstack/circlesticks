@@ -20,7 +20,7 @@ function wholeApp(){
         context.clearRect(0, 0, btmCanvas.width, btmCanvas.height);
         
         //remove all event listeners
-        topCanvas.removeEventListener('mousemove', onMouseMove);
+        //topCanvas.removeEventListener('mousemove', onMouseMove);
         topCanvas.removeEventListener('mousedown', onMouseDown);
         topCanvas.removeEventListener('mouseup', onMouseUp);
         //add one to let a click set the anchor circle for the stick model.
@@ -129,23 +129,15 @@ function wholeApp(){
         
     // ---------- End function definitions, now start the action ------------
     
-    // define the canvas elements
+    // ----- Define the canvas elements
     var btmCanvas = document.getElementById('btmCanvas');
-    // generate the condext variable for the canvas
-    //if (btmCanvas.getContext){
-    //   var context = btmCanvas.getContext('2d');
-    //}
-    //else {//In this case canvas isn't supported and we should fail gracefully somehow.
-        // See mozilla developer's network basic canvas tut
-    // }
-    
     var topCanvas = document.getElementById('topCanvas');
-    // generate the condext variable for the canvas
-    //var context = topCanvas.getContext('2d');
+
     
+    // ----- Event listeners
     
     // Event listener for reset button
-    document.getElementById("resetButton").addEventListener('click', reset, false);
+    document.getElementById('resetButton').addEventListener('click', reset, false);
 
     // Event listener for mouse move
     //btmCanvas.addEventListener('mouseover', function(ev) {
