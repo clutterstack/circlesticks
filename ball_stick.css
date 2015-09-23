@@ -1,13 +1,48 @@
 #mat {
-    width: 100%;
+   /* width: 100%;*/
+    overflow: hidden;
+    width: 900px;
     height: 400px;
+    margin: 0 auto;
+    /*position: relative;*/
     background-color: #999;
     text-align: center;
     
 }
 
-#mainCanvas {
-    border: 1px #000;
+#btmCanvas {
+    border: 1px solid #000;
     display: inline;
+    /*position: absolute;
+    top: 0px;
+    left: 0px;*/
+    float: left;
     background-color: white;
+}
+
+#topCanvas {
+    border: 1px solid #000;
+    display: inline;
+    /*position: absolute;
+    top: 0px;
+    left: 0px;*/
+    float: left;
+    background-color: white;
+}
+
+#buttonwrapper {
+    /*display: inline;*/
+    float: left;
+    border: 1px solid #000;
+    background-color: aquamarine;
+    width: 50px;
+    height: 100%;
+}
+
+#resetButton {
+    border: 1px solid #000;
+    /*width: 100%;*/
+   /* display: inline;*/
+    background-color: lightblue;
+    text-align: center;
 }
